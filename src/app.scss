@@ -1,0 +1,17 @@
+@use "@material/theme" with (
+  $primary: navy,
+  $on-primary: yellow,
+  $secondary: #76ff03
+);
+
+@use '@material/button/mdc-button';
+@use '@material/button';
+
+.foo-button {
+  @include button.container-fill-color(primary);
+  @include button.ink-color(on-primary);
+}
+
+.ok-button {
+  @include button.filled-accessible(red);
+}
