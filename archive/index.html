@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Leben in Deutschland Test App</title>
+    <link
+      href="https://unpkg.com/material-components-web@v4.0.0/dist/material-components-web.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://unpkg.com/material-components-web@v4.0.0/dist/material-components-web.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+  </head>
+  <body>
+    <script src="https://www.gstatic.com/firebasejs/7.13.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.13.2/firebase-analytics.js"></script>
+
+    <script>
+      // Your web app's Firebase configuration
+      var firebaseConfig = {
+        apiKey: 'AIzaSyD3ze1Q1pC3rxz5KosNpw1MB3bzlx113TQ',
+        authDomain: 'app-lid-2c61e.firebaseapp.com',
+        databaseURL: 'https://app-lid-2c61e.firebaseio.com',
+        projectId: 'app-lid-2c61e',
+        storageBucket: 'app-lid-2c61e.appspot.com',
+        messagingSenderId: '366269767',
+        appId: '1:366269767:web:87d4a5ba238f11e43b2862',
+        measurementId: 'G-6VSV2XJZS5',
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+      firebase.analytics();
+    </script>
+
+    <header class="mdc-top-app-bar">
+      <div class="mdc-top-app-bar__row">
+        <section
+          class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start"
+        >
+          <button
+            class="material-icons mdc-top-app-bar__navigation-icon mdc-icon-button"
+          >
+            menu
+          </button>
+          <span class="mdc-top-app-bar__title">Title</span>
+        </section>
+      </div>
+    </header>
+
+    <h1>Leben in Deutschland Test App</h1>
+
+    <button type="submit" class="mdc-button mdc-button--raised">
+      <div class="mdc-button__ripple"></div>
+      <span class="mdc-button__label">Save</span>
+    </button>
+  </body>
+</html>
