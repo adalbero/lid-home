@@ -1,0 +1,347 @@
+<body>
+  <head>
+    <title>LiD Home</title>
+
+    <link
+      href="https://unpkg.com/material-components-web@v4.0.0/dist/material-components-web.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://unpkg.com/material-components-web@v4.0.0/dist/material-components-web.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+
+    <link rel="stylesheet" href="app.css" />
+  </head>
+
+  <!-- Header -->
+  <body>
+    <header class="mdc-top-app-bar mdc-top-app-bar--fixed my-top-app-bar">
+      <div class="mdc-top-app-bar__row">
+        <section
+          class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start"
+        >
+          <img src="images/icon_round_192.png" height="50" width="50" />
+
+          <span class="mdc-top-app-bar__title"
+            >Leben in Deutschland Test App</span
+          >
+        </section>
+        <section
+          class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end"
+          role="toolbar"
+        >
+          <a class="mdc-button mdc-top-app-bar__action-item" href="home.html">
+            <div class="mdc-button__ripple"></div>
+            <span class="mdc-button__label">Home</span>
+          </a>
+          <a class="mdc-button mdc-top-app-bar__action-item" href="app.html">
+            <div class="mdc-button__ripple"></div>
+            <span class="mdc-button__label">App</span>
+          </a>
+          <a class="mdc-button mdc-top-app-bar__action-item" href="blog.html">
+            <div class="mdc-button__ripple"></div>
+            <span class="mdc-button__label">Blog</span>
+          </a>
+        </section>
+      </div>
+    </header>
+    <!-- Cover -->
+    <div class="cover"></div>
+    <!-- /Cover -->
+    <!-- /Header -->
+
+    <!-- Container -->
+    <div class="container">
+      <!-- Side Bar -->
+      <div class="side-bar">
+        <div class="app-sticky">
+          <h2 class="app-title">Content</h2>
+          <div class="mdc-card app-card">
+            <div class="app-card__list">
+              <ul class="mdc-list">
+                <li
+                  class="mdc-list-item"
+                  onclick="window.location.href='#settings'"
+                >
+                  <span class="mdc-list-item__graphic material-icons"
+                    >send</span
+                  >
+                  Settings
+                </li>
+                <li
+                  class="mdc-list-item"
+                  onclick="window.location.href='#category'"
+                >
+                  <span class="mdc-list-item__graphic material-icons"
+                    >send</span
+                  >
+                  Category
+                </li>
+                <li
+                  class="mdc-list-item"
+                  onclick="window.location.href='#exam'"
+                >
+                  <span class="mdc-list-item__graphic material-icons"
+                    >send</span
+                  >
+                  Exam list
+                </li>
+                <li
+                  class="mdc-list-item"
+                  onclick="window.location.href='#question'"
+                >
+                  <span class="mdc-list-item__graphic material-icons"
+                    >send</span
+                  >
+                  Questions
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <h2 class="app-title">App</h2>
+          <a
+            href="https://play.google.com/store/apps/details?id=com.adalbero.app.lebenindeutchland"
+            target="_blank"
+            rel="noreferrer noopener"
+            ><img
+              src="https://secureservercdn.net/160.153.137.40/ibm.437.myftpupload.com/wp-content/uploads/2019/12/google-play-badge-300x116.png"
+              alt=""
+              srcset="
+                https://secureservercdn.net/160.153.137.40/ibm.437.myftpupload.com/wp-content/uploads/2019/12/google-play-badge-300x116.png 300w,
+                https://secureservercdn.net/160.153.137.40/ibm.437.myftpupload.com/wp-content/uploads/2019/12/google-play-badge.png         646w
+              "
+              sizes="(max-width: 250px) 100vw, 250px"
+          /></a>
+        </div>
+      </div>
+      <!-- /Side Bar -->
+
+      <!-- Content -->
+      <div class="content">
+        <a class="anchor" name="settings"></a>
+        <h2 class="app-title">Settings</h2>
+
+        <!-- Card -->
+        <div class="mdc-card app-card">
+          <div class="app-card__media">
+            <img src="images/Screenshot_settings.png" height="300px" />
+          </div>
+          <div class="app-card__content">
+            <h2>Settings</h2>
+            <p>
+              The first thing to do is select your <em>Bundesland</em>. This way
+              the app will show you the questions related to your Bundesland.
+            </p>
+            <p>You can change your Bundesland at anytime in the settings.</p>
+          </div>
+        </div>
+        <!-- /Card -->
+        <br />
+        <!-- Card -->
+        <div class="mdc-card app-card">
+          <div class="app-card__content">
+            <h2>Bundesland</h2>
+            <p>
+              The first thing to do is select your <em>Bundesland</em>. This way
+              the app will show you the questions related to your Bundesland.
+            </p>
+            <p>You can change your Bundesland at anytime in the settings.</p>
+          </div>
+          <div class="app-card__media">
+            <img src="images/Screenshot_bundesland.png" height="300px" />
+          </div>
+        </div>
+        <!-- /Card -->
+
+        <a class="anchor" name="category"></a>
+        <h2 class="app-title">Category</h2>
+
+        <!-- Card -->
+        <div class="mdc-card app-card">
+          <div class="app-card__media">
+            <img src="images/Screenshot_category.png" height="300px" />
+          </div>
+          <div class="app-card__content">
+            <h2>Tests</h2>
+            <p>
+              Questions are organized in different categories by theme or topic.
+              Or in smart lists.
+            </p>
+            <p>
+              You can navigate the catalog of all 300 generic questions or the
+              10 questions of your Bundesland.
+            </p>
+            <p>
+              You can simulate a test of 33 random questions or do an Exercise
+              of 20 new questions every time.
+            </p>
+          </div>
+        </div>
+        <!-- /Card -->
+        <br />
+
+        <!-- Card -->
+        <div class="mdc-card app-card">
+          <div class="app-card__content">
+            <h2>Smart list</h2>
+            <p>
+              Questions are organized in different categories by theme or topic.
+              Or in smart lists.
+            </p>
+          </div>
+          <div class="app-card__media">
+            <img src="images/Screenshot_category2.png" height="300px" />
+          </div>
+        </div>
+        <br />
+        <!-- /Card -->
+
+        <a class="anchor" name="exam"></a>
+        <h2 class="app-title">Exam list</h2>
+
+        <!-- Card -->
+        <div class="mdc-card app-card">
+          <div class="app-card__media">
+            <img src="images/Screenshot_exam.png" height="300px" />
+          </div>
+          <div class="app-card__content">
+            <h2>Exam</h2>
+            <p></p>
+          </div>
+        </div>
+        <br />
+        <!-- /Card -->
+
+        <!-- Card -->
+        <div class="mdc-card app-card">
+          <div class="app-card__content">
+            <h2>Result</h2>
+            <p></p>
+          </div>
+          <div class="app-card__media">
+            <img src="images/Screenshot_exam2.png" height="300px" />
+          </div>
+        </div>
+        <br />
+        <!-- /Card -->
+
+        <!-- Card -->
+        <div class="mdc-card app-card">
+          <div class="app-card__media">
+            <img src="images/Screenshot_sort.png" height="300px" />
+          </div>
+          <div class="app-card__content">
+            <h2>Sort</h2>
+            <p></p>
+          </div>
+        </div>
+        <br />
+        <!-- /Card -->
+
+        <a class="anchor" name="question"></a>
+        <h2 class="app-title">Question</h2>
+
+        <!-- Card -->
+        <div class="mdc-card app-card">
+          <div class="app-card__media">
+            <img src="images/Screenshot_question.png" height="300px" />
+          </div>
+          <div class="app-card__content">
+            <h2>Question</h2>
+            <p></p>
+          </div>
+        </div>
+        <br />
+        <!-- /Card -->
+
+        <!-- Card -->
+        <div class="mdc-card app-card">
+          <div class="app-card__content">
+            <h2>Tags</h2>
+            <p></p>
+          </div>
+          <div class="app-card__media">
+            <img src="images/Screenshot_tag.png" height="300px" />
+          </div>
+        </div>
+        <!-- /Card -->
+        <br />
+
+        <!-- Card -->
+        <div class="mdc-card app-card">
+          <div class="app-card__media">
+            <img src="images/Screenshot_stat2.png" height="300px" />
+          </div>
+          <div class="app-card__content">
+            <h2>Last answers</h2>
+            <p></p>
+          </div>
+        </div>
+        <!-- /Card -->
+        <br />
+
+        <!-- Card -->
+        <div class="mdc-card app-card">
+          <div class="app-card__content">
+            <h2>Statistics</h2>
+            <p></p>
+          </div>
+          <div class="app-card__media">
+            <img src="images/Screenshot_stat.png" height="300px" />
+          </div>
+        </div>
+        <!-- /Card -->
+        <br />
+
+        <!-- Card -->
+        <div class="mdc-card app-card">
+          <div class="app-card__media">
+            <img src="images/Screenshot_Translate.png" height="300px" />
+          </div>
+          <div class="app-card__content">
+            <h2>Translate</h2>
+            <p></p>
+          </div>
+        </div>
+        <!-- /Card -->
+        <br />
+
+        <!-- Card -->
+        <div class="mdc-card app-card">
+          <div class="app-card__content">
+            <h2>Listen</h2>
+            <p></p>
+          </div>
+          <div class="app-card__media">
+            <img src="images/Screenshot_Listen.png" height="300px" />
+          </div>
+        </div>
+        <br />
+        <!-- /Card -->
+
+        <!-- Card -->
+        <div class="mdc-card app-card">
+          <div class="app-card__media">
+            <img src="images/Screenshot_voice.png" height="300px" />
+          </div>
+          <div class="app-card__content">
+            <h2>Voice</h2>
+            <p></p>
+          </div>
+        </div>
+        <br />
+        <!-- /Card -->
+      </div>
+      <!-- /Content -->
+    </div>
+    <!-- /Container -->
+
+    <!-- Footer -->
+    <div class="footer">
+      <p>Copyright &copy; 2020, Adalbero</p>
+    </div>
+  </body>
+</body>

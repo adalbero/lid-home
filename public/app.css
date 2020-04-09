@@ -1,0 +1,135 @@
+:root {
+  --mdc-theme-primary: navy;
+  --mdc-theme-secondary: pink;
+  --mdc-theme-background: #fff;
+  --mdc-theme-on-primary: #fff;
+  --mdc-theme-on-secondary: #fff;
+
+  --app-container-background: #fafafa;
+  --app-footer-background: #9a9a9a;
+  --app-dark: #999;
+
+  display: flex;
+  font-family: Roboto, sans-serif;
+}
+
+body {
+  margin: 0;
+  letter-spacing: 0.1px;
+  color: rgba(0, 0, 0, 0.65);
+  line-height: 1.5em;
+  width: 100%;
+  background-color: var(--app-container-background, #fafafa);
+}
+
+p {
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  text-align: justify;
+}
+
+a.anchor {
+  position: relative;
+  top: -64px;
+}
+
+.app-sticky {
+  position: sticky;
+  top: 64px;
+}
+
+.my-top-app-bar {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.cover {
+  height: 400px;
+  width: 100%;
+  background-color: #cccccc;
+  background: url('images/feature-graphic.png') center center no-repeat;
+  background-size: cover;
+}
+
+.app-title {
+  border-bottom: solid 2px var(--app-dark);
+  padding-bottom: 4px;
+}
+
+.container {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+
+  max-width: 1100px;
+  position: relative;
+  margin: 0 auto;
+  padding: 0 auto;
+
+  --background-color: lightcyan;
+  --outline: solid 1px gray;
+}
+
+.content {
+  max-width: 740px;
+  width: calc(70% - 64px);
+  padding: 32px;
+
+  --background-color: lightgreen;
+  --outline: solid 1px gray;
+}
+
+.side-bar {
+  display: flex;
+  flex-direction: column;
+  max-width: 250px;
+  width: 250px;
+  position: relative;
+  vertical-align: top;
+  padding: 32px;
+  padding-right: 0;
+
+  --background-color: lightyellow;
+  --outline: solid 1px gray;
+}
+
+.app-card {
+  display: flex;
+  flex-direction: row;
+  --margin-bottom: 48px;
+}
+
+.app-card__media {
+  padding: 4px;
+  background-color: #ccc;
+}
+
+.app-card__content {
+  padding: 8px 16px;
+  flex: 1 1 auto;
+
+  --background-color: lightyellow;
+}
+
+.app-card__list {
+  --padding: 8px 16px;
+  flex: 1 1 auto;
+
+  --background-color: lightyellow;
+}
+
+.app-card .mdc-list-item {
+  height: 36px;
+}
+.app-card .mdc-list-item__graphic {
+  margin-right: 8px;
+}
+
+.footer {
+  height: 50px;
+  background-color: var(--app-footer-background, #fafafa);
+  padding: 32px;
+  text-align: center;
+}
