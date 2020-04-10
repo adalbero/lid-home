@@ -31,6 +31,19 @@ p {
   text-align: justify;
 }
 
+.app-link,
+.app-link:link,
+.app-link:visited {
+  cursor: pointer;
+  color: blue;
+  text-decoration: none;
+}
+
+.app-link:hover {
+  color: blueviolet;
+  text-decoration: none;
+}
+
 a.anchor {
   position: relative;
   top: -64px;
@@ -39,6 +52,10 @@ a.anchor {
 .app-sticky {
   position: sticky;
   top: 64px;
+}
+
+.app-pointer {
+  cursor: pointer;
 }
 
 .my-top-app-bar {
@@ -121,15 +138,21 @@ a.anchor {
 }
 
 .app-card .mdc-list-item {
-  height: 36px;
+  --height: 36px;
 }
 .app-card .mdc-list-item__graphic {
   margin-right: 8px;
 }
 
 .footer {
-  height: 50px;
+  min-height: 50px;
+  --height: 50px;
   background-color: var(--app-footer-background, #fafafa);
   padding: 32px;
+  text-align: center;
+}
+
+.footer P {
+  font-size: smaller;
   text-align: center;
 }

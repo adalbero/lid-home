@@ -1,7 +1,8 @@
 <body>
   <head>
-    <title>LiD Home</title>
+    <title>LiD Test - App</title>
 
+    <!-- Material Design -->
     <link
       href="https://unpkg.com/material-components-web@v4.0.0/dist/material-components-web.min.css"
       rel="stylesheet"
@@ -12,8 +13,25 @@
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
     />
 
+    <!-- AdSense -->
+    <script
+      data-ad-client="ca-pub-6002824579891362"
+      async
+      src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
+    ></script>
+
     <link rel="stylesheet" href="app.css" />
+    <script src="app.js"></script>
   </head>
+
+  <!-- Firebase -->
+  <script src="/__/firebase/7.14.0/firebase-app.js"></script>
+  <script src="/__/firebase/7.14.0/firebase-analytics.js"></script>
+  <script src="/__/firebase/init.js"></script>
+  <script>
+    appLog('app');
+  </script>
+  <!-- /Firebase -->
 
   <!-- Header -->
   <body>
@@ -32,18 +50,20 @@
           class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end"
           role="toolbar"
         >
-          <a class="mdc-button mdc-top-app-bar__action-item" href="home.html">
+          <button
+            class="mdc-button mdc-top-app-bar__action-item"
+            onClick="appLink('index.html')"
+          >
             <div class="mdc-button__ripple"></div>
             <span class="mdc-button__label">Home</span>
-          </a>
-          <a class="mdc-button mdc-top-app-bar__action-item" href="app.html">
+          </button>
+          <button
+            class="mdc-button mdc-top-app-bar__action-item"
+            onClick="appLink('app.html')"
+          >
             <div class="mdc-button__ripple"></div>
             <span class="mdc-button__label">App</span>
-          </a>
-          <a class="mdc-button mdc-top-app-bar__action-item" href="blog.html">
-            <div class="mdc-button__ripple"></div>
-            <span class="mdc-button__label">Blog</span>
-          </a>
+          </button>
         </section>
       </div>
     </header>
@@ -57,41 +77,30 @@
       <!-- Side Bar -->
       <div class="side-bar">
         <div class="app-sticky">
+          <!-- Content Menu -->
           <h2 class="app-title">Content</h2>
           <div class="mdc-card app-card">
             <div class="app-card__list">
               <ul class="mdc-list">
-                <li
-                  class="mdc-list-item"
-                  onclick="window.location.href='#settings'"
-                >
+                <li class="mdc-list-item" onClick="appLink('#settings')">
                   <span class="mdc-list-item__graphic material-icons"
                     >send</span
                   >
                   Settings
                 </li>
-                <li
-                  class="mdc-list-item"
-                  onclick="window.location.href='#category'"
-                >
+                <li class="mdc-list-item" onClick="appLink('#category')">
                   <span class="mdc-list-item__graphic material-icons"
                     >send</span
                   >
-                  Category
+                  Categories
                 </li>
-                <li
-                  class="mdc-list-item"
-                  onclick="window.location.href='#exam'"
-                >
+                <li class="mdc-list-item" onClick="appLink('#exam')">
                   <span class="mdc-list-item__graphic material-icons"
                     >send</span
                   >
-                  Exam list
+                  Exams
                 </li>
-                <li
-                  class="mdc-list-item"
-                  onclick="window.location.href='#question'"
-                >
+                <li class="mdc-list-item" onClick="appLink('#question')">
                   <span class="mdc-list-item__graphic material-icons"
                     >send</span
                   >
@@ -100,21 +109,22 @@
               </ul>
             </div>
           </div>
+          <!-- /Content Menu -->
 
+          <!-- Install -->
           <h2 class="app-title">App</h2>
-          <a
-            href="https://play.google.com/store/apps/details?id=com.adalbero.app.lebenindeutchland"
-            target="_blank"
-            rel="noreferrer noopener"
-            ><img
-              src="https://secureservercdn.net/160.153.137.40/ibm.437.myftpupload.com/wp-content/uploads/2019/12/google-play-badge-300x116.png"
-              alt=""
-              srcset="
-                https://secureservercdn.net/160.153.137.40/ibm.437.myftpupload.com/wp-content/uploads/2019/12/google-play-badge-300x116.png 300w,
-                https://secureservercdn.net/160.153.137.40/ibm.437.myftpupload.com/wp-content/uploads/2019/12/google-play-badge.png         646w
-              "
-              sizes="(max-width: 250px) 100vw, 250px"
-          /></a>
+          <img
+            src="https://secureservercdn.net/160.153.137.40/ibm.437.myftpupload.com/wp-content/uploads/2019/12/google-play-badge-300x116.png"
+            alt=""
+            srcset="
+              https://secureservercdn.net/160.153.137.40/ibm.437.myftpupload.com/wp-content/uploads/2019/12/google-play-badge-300x116.png 300w,
+              https://secureservercdn.net/160.153.137.40/ibm.437.myftpupload.com/wp-content/uploads/2019/12/google-play-badge.png         646w
+            "
+            sizes="(max-width: 250px) 100vw, 250px"
+            onClick="appOpen('https://play.google.com/store/apps/details?id=com.adalbero.app.lebenindeutchland', true)"
+            class="app-pointer"
+          />
+          <!-- /Install -->
         </div>
       </div>
       <!-- /Side Bar -->
@@ -127,15 +137,16 @@
         <!-- Card -->
         <div class="mdc-card app-card">
           <div class="app-card__media">
-            <img src="images/Screenshot_settings.png" height="300px" />
+            <img src="images/Screenshot_bundesland.png" height="300px" />
           </div>
           <div class="app-card__content">
-            <h2>Settings</h2>
+            <h2>Bundesland</h2>
             <p>
-              The first thing to do is select your <em>Bundesland</em>. This way
-              the app will show you the questions related to your Bundesland.
+              The first thing to do is to select your <em>Bundesland</em>. This
+              way the app will show you the questions related to your
+              Bundesland.
             </p>
-            <p>You can change your Bundesland at anytime in the settings.</p>
+            <p>You can change your Bundesland at any time in the settings.</p>
           </div>
         </div>
         <!-- /Card -->
@@ -143,21 +154,25 @@
         <!-- Card -->
         <div class="mdc-card app-card">
           <div class="app-card__content">
-            <h2>Bundesland</h2>
+            <h2>Settings</h2>
             <p>
-              The first thing to do is select your <em>Bundesland</em>. This way
-              the app will show you the questions related to your Bundesland.
+              Change the Bundesland. Set how many questions to show in the
+              Exercise Smart List. Choose how you prefer to see your questions:
+              inline in the exam list or in a separate view for each question.
             </p>
-            <p>You can change your Bundesland at anytime in the settings.</p>
+            <p>
+              You can also set how many questions answer to remember for
+              statistics and reset your statistics data.
+            </p>
           </div>
           <div class="app-card__media">
-            <img src="images/Screenshot_bundesland.png" height="300px" />
+            <img src="images/Screenshot_settings.png" height="300px" />
           </div>
         </div>
         <!-- /Card -->
 
         <a class="anchor" name="category"></a>
-        <h2 class="app-title">Category</h2>
+        <h2 class="app-title">Categories</h2>
 
         <!-- Card -->
         <div class="mdc-card app-card">
@@ -188,8 +203,12 @@
           <div class="app-card__content">
             <h2>Smart list</h2>
             <p>
-              Questions are organized in different categories by theme or topic.
-              Or in smart lists.
+              You can build your own exam list based on a keyword or by tags.
+            </p>
+            <p>
+              The App keeps track of your latest answers and builds smart lists
+              so you can choose to train, for example, on only questions you got
+              mostly wrong.
             </p>
           </div>
           <div class="app-card__media">
@@ -200,7 +219,7 @@
         <!-- /Card -->
 
         <a class="anchor" name="exam"></a>
-        <h2 class="app-title">Exam list</h2>
+        <h2 class="app-title">Exams</h2>
 
         <!-- Card -->
         <div class="mdc-card app-card">
@@ -209,6 +228,14 @@
           </div>
           <div class="app-card__content">
             <h2>Exam</h2>
+            <p>
+              When you select a category or smart list, the app starts an Exam
+              with a set of questions.
+            </p>
+            <p>
+              You can choose to respond to the questions inline, in the exam
+              list, or to see each question in its own window.
+            </p>
             <p></p>
           </div>
         </div>
@@ -218,8 +245,17 @@
         <!-- Card -->
         <div class="mdc-card app-card">
           <div class="app-card__content">
-            <h2>Result</h2>
-            <p></p>
+            <h2>Progress</h2>
+            <p>
+              For each exam, the app keeps track of the time (you have 60
+              minutes for each exam), and the questions answered, right or
+              wrong.
+            </p>
+            <p>
+              The app gives each exam a score based on your right or wrong
+              answers. This way you can see, for each category, where you are
+              strong or not.
+            </p>
           </div>
           <div class="app-card__media">
             <img src="images/Screenshot_exam2.png" height="300px" />
@@ -231,11 +267,41 @@
         <!-- Card -->
         <div class="mdc-card app-card">
           <div class="app-card__media">
-            <img src="images/Screenshot_sort.png" height="300px" />
+            <img src="images/Screenshot_exam3.png" height="300px" />
           </div>
           <div class="app-card__content">
+            <h2>Result</h2>
+            <p>
+              When you answer all the questions in the exam, or When the time is
+              out, you will see the result.
+            </p>
+            <p>
+              If you have answered right, more than the threshold of half of the
+              questions, you will pass the exam!
+            </p>
+          </div>
+        </div>
+        <br />
+        <!-- /Card -->
+
+        <!-- Card -->
+        <div class="mdc-card app-card">
+          <div class="app-card__content">
             <h2>Sort</h2>
-            <p></p>
+            <p>
+              You can sort the questions in the exam by the Question number
+              (natural order).
+            </p>
+            <p>
+              Or by the rating of each question, so you can, for example, see
+              first the questions you are weaker.
+            </p>
+            <p>
+              Or let the app shuffle all questions in random order.
+            </p>
+          </div>
+          <div class="app-card__media">
+            <img src="images/Screenshot_sort.png" height="300px" />
           </div>
         </div>
         <br />
@@ -251,7 +317,15 @@
           </div>
           <div class="app-card__content">
             <h2>Question</h2>
-            <p></p>
+            <p>
+              Each question is shown with a colored category, the number, the
+              question, and 4 options. Some questions may have pictures also.
+            </p>
+            <p>
+              As soon as you answer the question it will show if you have it
+              right or wrong. A colored bar on the left also shows your result,
+              so you can easily see which questions you got wrong.
+            </p>
           </div>
         </div>
         <br />
@@ -261,7 +335,20 @@
         <div class="mdc-card app-card">
           <div class="app-card__content">
             <h2>Tags</h2>
-            <p></p>
+            <p>
+              You can easily tag a question with labels, so you can have a smart
+              list of tagged questions.
+            </p>
+            <p>
+              You can use the provided labels like 'date' if the question
+              contains a date; 'difficult' if it is a difficult question for
+              you; 'image' if it has an image; or 'person' if it references a
+              person.
+            </p>
+            <p>
+              Or you can create your own labels, and a question can have more
+              than one tag associated with it.
+            </p>
           </div>
           <div class="app-card__media">
             <img src="images/Screenshot_tag.png" height="300px" />
@@ -277,7 +364,16 @@
           </div>
           <div class="app-card__content">
             <h2>Last answers</h2>
-            <p></p>
+            <p>
+              The app keeps track of your latest 5 answers. You can see a bar
+              with the last answers you gave to a question.
+            </p>
+            <p>
+              The app also gives each question a rating based on the most recent
+              answers. You can use this rating to order your questions or to use
+              a smart list to filter, for example, the questions you got mostly
+              wrong.
+            </p>
           </div>
         </div>
         <!-- /Card -->
@@ -287,7 +383,15 @@
         <div class="mdc-card app-card">
           <div class="app-card__content">
             <h2>Statistics</h2>
-            <p></p>
+            <p>
+              The app gives a rating also to the exam, based on each question in
+              it.
+            </p>
+            <p>
+              You can see how many questions where not answered yet, how many
+              you got right in the last time you answered it, and how many you
+              got right at least once.
+            </p>
           </div>
           <div class="app-card__media">
             <img src="images/Screenshot_stat.png" height="300px" />
@@ -299,11 +403,17 @@
         <!-- Card -->
         <div class="mdc-card app-card">
           <div class="app-card__media">
-            <img src="images/Screenshot_Translate.png" height="300px" />
+            <img src="images/Screenshot_translate.png" height="300px" />
           </div>
           <div class="app-card__content">
             <h2>Translate</h2>
-            <p></p>
+            <p>
+              With one click, you can share the question and its 4 options to
+              Google Translate, which will translate to your selected language.
+            </p>
+            <p>
+              This is the most popular feature of the app.
+            </p>
           </div>
         </div>
         <!-- /Card -->
@@ -313,10 +423,13 @@
         <div class="mdc-card app-card">
           <div class="app-card__content">
             <h2>Listen</h2>
-            <p></p>
+            <p>
+              Click the listen button to hear your device read the question and
+              its 4 options to you.
+            </p>
           </div>
           <div class="app-card__media">
-            <img src="images/Screenshot_Listen.png" height="300px" />
+            <img src="images/Screenshot_listen.png" height="300px" />
           </div>
         </div>
         <br />
@@ -329,7 +442,10 @@
           </div>
           <div class="app-card__content">
             <h2>Voice</h2>
-            <p></p>
+            <p>
+              You can even say the correct answer text (or letter or number) and
+              the app will select it to you.
+            </p>
           </div>
         </div>
         <br />
@@ -341,7 +457,22 @@
 
     <!-- Footer -->
     <div class="footer">
-      <p>Copyright &copy; 2020, Adalbero</p>
+      <p>
+        <b>Non-Affiliation Disclaimer:</b> We are not endorsed by, directly
+        affiliated with, maintained, authorized, or sponsored by
+        <span onClick="appOpen('https://bamf.de')" class="app-link"
+          >Bundesamt für Migration und Flüchtlinge</span
+        >. Our purpose is to give the community alternative ways to study and to
+        be successful in the exam.
+      </p>
+      <div>Copyright &copy; 2020, Adalbero</div>
+      <span
+        class="material-icons app-link"
+        onClick="appLink('mailto:app.adalbero@gmail.com')"
+        style="color: inherit;"
+        >mail</span
+      >
     </div>
+    <!-- /Footer -->
   </body>
 </body>

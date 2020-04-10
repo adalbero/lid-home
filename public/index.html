@@ -1,0 +1,267 @@
+<body>
+  <head>
+    <title>LiD Test - Home</title>
+
+    <!-- Material Design -->
+    <link
+      href="https://unpkg.com/material-components-web@v4.0.0/dist/material-components-web.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://unpkg.com/material-components-web@v4.0.0/dist/material-components-web.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+
+    <!-- AdSense -->
+    <script
+      data-ad-client="ca-pub-6002824579891362"
+      async
+      src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
+    ></script>
+
+    <link rel="stylesheet" href="app.css" />
+    <script src="app.js"></script>
+  </head>
+
+  <!-- Firebase -->
+  <script src="/__/firebase/7.14.0/firebase-app.js"></script>
+  <script src="/__/firebase/7.14.0/firebase-analytics.js"></script>
+  <script src="/__/firebase/init.js"></script>
+  <script>
+    appLog('home');
+  </script>
+  <!-- /Firebase -->
+
+  <!-- Header -->
+  <body>
+    <header class="mdc-top-app-bar my-top-app-bar">
+      <div class="mdc-top-app-bar__row">
+        <section
+          class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start"
+        >
+          <img src="images/icon_round_192.png" height="50" width="50" />
+
+          <span class="mdc-top-app-bar__title"
+            >Leben in Deutschland Test App</span
+          >
+        </section>
+        <section
+          class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end"
+          role="toolbar"
+        >
+          <button
+            class="mdc-button mdc-top-app-bar__action-item"
+            onClick="appLink('index.html')"
+          >
+            <div class="mdc-button__ripple"></div>
+            <span class="mdc-button__label">Home</span>
+          </button>
+          <button
+            class="mdc-button mdc-top-app-bar__action-item"
+            onClick="appLink('app.html')"
+          >
+            <div class="mdc-button__ripple"></div>
+            <span class="mdc-button__label">App</span>
+          </button>
+        </section>
+      </div>
+    </header>
+    <!-- Cover -->
+    <div class="cover"></div>
+    <!-- /Cover -->
+    <!-- /Header -->
+
+    <!-- Container -->
+    <div class="container">
+      <!-- Side Bar -->
+      <div class="side-bar">
+        <div class="app-sticky">
+          <!-- Content Menu -->
+          <h2 class="app-title">Content</h2>
+          <div class="mdc-card app-card">
+            <div class="app-card__list">
+              <ul class="mdc-list">
+                <li class="mdc-list-item" onClick="appLink('#test')">
+                  <span class="mdc-list-item__graphic material-icons"
+                    >send</span
+                  >
+                  The Test
+                </li>
+                <li class="mdc-list-item" onClick="appLink('#app')">
+                  <span class="mdc-list-item__graphic material-icons"
+                    >send</span
+                  >
+                  The App
+                </li>
+                <li class="mdc-list-item" onClick="appLink('#links')">
+                  <span class="mdc-list-item__graphic material-icons"
+                    >send</span
+                  >
+                  Links
+                </li>
+              </ul>
+            </div>
+          </div>
+          <!-- Content Menu -->
+
+          <!-- Install -->
+          <h2 class="app-title">App</h2>
+          <img
+            src="https://secureservercdn.net/160.153.137.40/ibm.437.myftpupload.com/wp-content/uploads/2019/12/google-play-badge-300x116.png"
+            alt=""
+            srcset="
+              https://secureservercdn.net/160.153.137.40/ibm.437.myftpupload.com/wp-content/uploads/2019/12/google-play-badge-300x116.png 300w,
+              https://secureservercdn.net/160.153.137.40/ibm.437.myftpupload.com/wp-content/uploads/2019/12/google-play-badge.png         646w
+            "
+            sizes="(max-width: 250px) 100vw, 250px"
+            onClick="appOpen('https://play.google.com/store/apps/details?id=com.adalbero.app.lebenindeutchland', true)"
+            class="app-pointer"
+          />
+          <!-- /Install -->
+        </div>
+      </div>
+      <!-- /Side Bar -->
+
+      <!-- Content -->
+      <div class="content">
+        <a class="anchor" name="test"></a>
+        <h2 class="app-title">The Test</h2>
+        <div class="mdc-card app-card">
+          <div class="app-card__content">
+            <p>
+              <em>Leben in Deutshland Test</em> or <em>Einbürgerungstest</em> is
+              a test prepared by
+              <span onClick="appOpen('https://bamf.de')" class="app-link"
+                >Bundesamt für Migration und Flüchtlinge (BAMF)</span
+              >.
+            </p>
+            <p>
+              The test consists of 33 questions. 30 questions from a catalog of
+              300 general purpose questions, plus 3 out of 10 specific questions
+              from your Bundesland.
+            </p>
+            <p>
+              Each question has 4 options, which only one is correct.
+            </p>
+            <p>
+              You have 60 minutes to complete the test. To pass, you need to get
+              at least half of the questions right (17 of 33).
+            </p>
+          </div>
+        </div>
+
+        <a class="anchor" name="app"></a>
+        <h2 class="app-title">The App</h2>
+        <div class="mdc-card app-card">
+          <div class="app-card__content">
+            <p>
+              The app is designed to offer an easy and interactive way to
+              prepare yourself for the test. It uses the official catalog of
+              questions and implements a set of cool features to help you be
+              more productive in your study.
+            </p>
+
+            <p>
+              All questions of the catalog are grouped into categories and smart
+              lists. You can flag questions with your custom tags, like
+              "difficult" or just search for a specific word, like "DDR". The
+              App can even read out loud the question to you. You can also
+              translate any question to your native language.
+            </p>
+
+            <p>
+              It keeps track of your progress and generates statistics making it
+              easy to see where your weak points are. You can exercise only the
+              questions you got wrong in the past
+            </p>
+
+            <p>
+              You can also simulate the test with 33 random questions. Or
+              exercise with 20 new questions every time.
+            </p>
+
+            <p>
+              Find more details about the app features in the
+              <span onClick="appLink('app.html')" class="app-link">App</span>
+              page.
+            </p>
+          </div>
+        </div>
+
+        <a class="anchor" name="Links"></a>
+        <h2 class="app-title">Links</h2>
+        <!-- Card -->
+        <div class="mdc-card app-card">
+          <div class="app-card__list">
+            <ul class="mdc-list mdc-list--two-line">
+              <li class="mdc-list-item" onClick="appOpen('https://bamf.de')">
+                <span class="mdc-list-item__graphic material-icons">send</span>
+                <span class="mdc-list-item__text">
+                  <span class="mdc-list-item__primary-text"
+                    >Bundesamt für Migration und Flüchtlinge (BAMF)</span
+                  >
+                  <span class="mdc-list-item__secondary-text"
+                    >Federal Office for Migration and Refugees.</span
+                  >
+                </span>
+              </li>
+              <li
+                class="mdc-list-item"
+                onClick="appOpen('http://oet.bamf.de/pls/oetut/f?p=534:1:0')"
+              >
+                <span class="mdc-list-item__graphic material-icons">send</span>
+                <span class="mdc-list-item__text">
+                  <span class="mdc-list-item__primary-text"
+                    >BAMF: Questions Catalog</span
+                  >
+                  <span class="mdc-list-item__secondary-text"
+                    >The official catalog of all 300 general questions and 10 of
+                    selected Bundesland.</span
+                  >
+                </span>
+              </li>
+              <li
+                class="mdc-list-item"
+                onClick="appOpen('http://oet.bamf.de/pls/oetut')"
+              >
+                <span class="mdc-list-item__graphic material-icons">send</span>
+                <span class="mdc-list-item__text">
+                  <span class="mdc-list-item__primary-text"
+                    >BAMF: Test simulator</span
+                  >
+                  <span class="mdc-list-item__secondary-text"
+                    >Do a test simulation with 33 questions in 60 minutes.</span
+                  >
+                </span>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- /Card -->
+      </div>
+      <!-- /Content -->
+    </div>
+    <!-- /Container -->
+
+    <!-- Footer -->
+    <div class="footer">
+      <p>
+        <b>Non-Affiliation Disclaimer:</b> We are not endorsed by, directly
+        affiliated with, maintained, authorized, or sponsored by
+        <span onClick="appOpen('https://bamf.de')" class="app-link"
+          >Bundesamt für Migration und Flüchtlinge</span
+        >. Our purpose is to give the community alternative ways to study and to
+        be successful in the exam.
+      </p>
+      <div>Copyright &copy; 2020, Adalbero</div>
+      <span
+        class="material-icons app-link"
+        onClick="appLink('mailto:app.adalbero@gmail.com')"
+        style="color: inherit;"
+        >mail</span
+      >
+    </div>
+    <!-- /Footer -->
+  </body>
+</body>
