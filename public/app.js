@@ -11,9 +11,14 @@ function appLink(url) {
 }
 
 function appLog(text) {
-  if ('firebase' in window) {
-    firebase.analytics().logEvent('lid_home_event', { value: text, app: APP });
-  } else {
-    console.log(text);
-  }
+  try {
+    if ('firebase' in window) {
+      firebase
+        .analytics()
+        .logEvent('lid_home_event', { value: text, app: APP });
+      return;
+    }
+  } catch (ex) {}
+
+  console.log(text);
 }

@@ -2,6 +2,9 @@
   <head>
     <title>LiD Test - Home</title>
 
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
     <!-- Material Design -->
     <link
       href="https://unpkg.com/material-components-web@v4.0.0/dist/material-components-web.min.css"
@@ -20,22 +23,19 @@
       src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
     ></script>
 
+    <!-- Firebase -->
+    <script src="/__/firebase/7.14.0/firebase-app.js"></script>
+    <script src="/__/firebase/7.14.0/firebase-analytics.js"></script>
+    <script src="/__/firebase/init.js"></script>
+    <!-- /Firebase -->
+
     <link rel="stylesheet" href="app.css" />
     <script src="app.js"></script>
   </head>
 
-  <!-- Firebase -->
-  <script src="/__/firebase/7.14.0/firebase-app.js"></script>
-  <script src="/__/firebase/7.14.0/firebase-analytics.js"></script>
-  <script src="/__/firebase/init.js"></script>
-  <script>
-    appLog('home');
-  </script>
-  <!-- /Firebase -->
-
   <!-- Header -->
   <body>
-    <header class="mdc-top-app-bar my-top-app-bar">
+    <header class="mdc-top-app-bar app-top-app-bar">
       <div class="mdc-top-app-bar__row">
         <section
           class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start"
@@ -107,17 +107,18 @@
 
           <!-- Install -->
           <h2 class="app-title">App</h2>
-          <img
-            src="https://secureservercdn.net/160.153.137.40/ibm.437.myftpupload.com/wp-content/uploads/2019/12/google-play-badge-300x116.png"
-            alt=""
-            srcset="
-              https://secureservercdn.net/160.153.137.40/ibm.437.myftpupload.com/wp-content/uploads/2019/12/google-play-badge-300x116.png 300w,
-              https://secureservercdn.net/160.153.137.40/ibm.437.myftpupload.com/wp-content/uploads/2019/12/google-play-badge.png         646w
-            "
-            sizes="(max-width: 250px) 100vw, 250px"
-            onClick="appOpen('https://play.google.com/store/apps/details?id=com.adalbero.app.lebenindeutchland', true)"
-            class="app-pointer"
-          />
+          <div class="app-badge">
+            <img
+              src="https://secureservercdn.net/160.153.137.40/ibm.437.myftpupload.com/wp-content/uploads/2019/12/google-play-badge-300x116.png"
+              srcset="
+                https://secureservercdn.net/160.153.137.40/ibm.437.myftpupload.com/wp-content/uploads/2019/12/google-play-badge-300x116.png 300w,
+                https://secureservercdn.net/160.153.137.40/ibm.437.myftpupload.com/wp-content/uploads/2019/12/google-play-badge.png         646w
+              "
+              onClick="appOpen('https://play.google.com/store/apps/details?id=com.adalbero.app.lebenindeutchland', true)"
+              class="app-pointer"
+              width="250"
+            />
+          </div>
           <!-- /Install -->
         </div>
       </div>

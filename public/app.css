@@ -19,6 +19,7 @@ body {
   color: rgba(0, 0, 0, 0.65);
   line-height: 1.5em;
   width: 100%;
+  background-color: #fafafa;
   background-color: var(--app-container-background, #fafafa);
 }
 
@@ -58,7 +59,7 @@ a.anchor {
   cursor: pointer;
 }
 
-.my-top-app-bar {
+.app-top-app-bar {
   background-color: rgba(0, 0, 0, 0.5);
 }
 
@@ -91,7 +92,7 @@ a.anchor {
 
 .content {
   max-width: 740px;
-  width: calc(70% - 64px);
+  width: 750px;
   padding: 32px;
 
   --background-color: lightgreen;
@@ -112,10 +113,41 @@ a.anchor {
   --outline: solid 1px gray;
 }
 
+.app-badge {
+  text-align: center;
+}
+
+@media (max-width: 750px) {
+  .app-top-app-bar .mdc-top-app-bar__title {
+    white-space: normal;
+    line-height: 1.2rem;
+  }
+
+  .cover {
+    height: 200px;
+  }
+
+  .container {
+    flex-direction: column;
+  }
+
+  .side-bar {
+    max-width: 740px;
+    width: calc(100% - 64px);
+    padding: 0 32px;
+
+    --background-color: lightyellow;
+  }
+
+  .app-sticky {
+    position: inherit;
+    top: 0px;
+  }
+}
+
 .app-card {
   display: flex;
   flex-direction: row;
-  --margin-bottom: 48px;
 }
 
 .app-card__media {
@@ -133,13 +165,14 @@ a.anchor {
 .app-card__list {
   --padding: 8px 16px;
   flex: 1 1 auto;
-
   --background-color: lightyellow;
 }
 
-.app-card .mdc-list-item {
-  --height: 36px;
+.app-card .mdc-list-item__primary-text,
+.app-card .mdc-list-item__secondary-text {
+  white-space: normal;
 }
+
 .app-card .mdc-list-item__graphic {
   margin-right: 8px;
 }
@@ -147,7 +180,8 @@ a.anchor {
 .footer {
   min-height: 50px;
   --height: 50px;
-  background-color: var(--app-footer-background, #fafafa);
+  background-color: #9a9a9a;
+  background-color: var(--app-footer-background, #9a9a9a);
   padding: 32px;
   text-align: center;
 }
