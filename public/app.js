@@ -1,4 +1,4 @@
-const APP = 'lid-home:1.0';
+const APP = 'lid-home:2.0';
 
 function appOpen(url) {
   appLog('open: ' + url);

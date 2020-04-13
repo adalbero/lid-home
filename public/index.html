@@ -1,6 +1,20 @@
 <body>
   <head>
-    <title>LiD Test - Home</title>
+    <!-- Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-163427348-1"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+
+      gtag('config', 'UA-163427348-1');
+    </script>
+    <!-- /Google Analytics -->
 
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -15,13 +29,7 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
     />
-
-    <!-- AdSense -->
-    <script
-      data-ad-client="ca-pub-6002824579891362"
-      async
-      src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
-    ></script>
+    <!-- /Material Design -->
 
     <!-- Firebase -->
     <script src="/__/firebase/7.14.0/firebase-app.js"></script>
@@ -29,8 +37,12 @@
     <script src="/__/firebase/init.js"></script>
     <!-- /Firebase -->
 
+    <!-- App -->
     <link rel="stylesheet" href="app.css" />
     <script src="app.js"></script>
+
+    <title>LiD Test - Home</title>
+    <!-- /App -->
   </head>
 
   <!-- Header -->
