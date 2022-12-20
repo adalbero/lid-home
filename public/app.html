@@ -10,9 +10,9 @@
       function gtag() {
         dataLayer.push(arguments);
       }
-      gtag('js', new Date());
+      gtag("js", new Date());
 
-      gtag('config', 'UA-163427348-1');
+      gtag("config", "UA-163427348-1");
     </script>
     <!-- /Google Analytics -->
 
@@ -59,22 +59,29 @@
           >
         </section>
         <section
-          class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end"
+          class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end app-toolbar"
           role="toolbar"
         >
           <button
-            class="mdc-button mdc-top-app-bar__action-item"
+            class="mdc-button app-button mdc-top-app-bar__action-item"
             onClick="appLink('index.html')"
           >
             <div class="mdc-button__ripple"></div>
             <span class="mdc-button__label">Home</span>
           </button>
           <button
-            class="mdc-button mdc-top-app-bar__action-item"
+            class="mdc-button app-button mdc-top-app-bar__action-item"
             onClick="appLink('app.html')"
           >
             <div class="mdc-button__ripple"></div>
             <span class="mdc-button__label">App</span>
+          </button>
+          <button
+            class="mdc-button app-button mdc-top-app-bar__action-item"
+            onClick="appLink('policy.html')"
+          >
+            <div class="mdc-button__ripple"></div>
+            <span class="mdc-button__label">Policy</span>
           </button>
         </section>
       </div>
@@ -127,11 +134,7 @@
           <h2 class="app-title">App</h2>
           <div class="app-badge">
             <img
-              src="https://secureservercdn.net/160.153.137.40/ibm.437.myftpupload.com/wp-content/uploads/2019/12/google-play-badge-300x116.png"
-              srcset="
-                https://secureservercdn.net/160.153.137.40/ibm.437.myftpupload.com/wp-content/uploads/2019/12/google-play-badge-300x116.png 300w,
-                https://secureservercdn.net/160.153.137.40/ibm.437.myftpupload.com/wp-content/uploads/2019/12/google-play-badge.png         646w
-              "
+              src="images/google-play-badge.png"
               onClick="appOpen('https://play.google.com/store/apps/details?id=com.adalbero.app.lebenindeutchland', true)"
               class="app-pointer"
               width="250"
@@ -309,9 +312,7 @@
               Or by the rating of each question, so you can, for example, see
               first the questions you are weaker.
             </p>
-            <p>
-              Or let the app shuffle all questions in random order.
-            </p>
+            <p>Or let the app shuffle all questions in random order.</p>
           </div>
           <div class="app-card__media">
             <img src="images/Screenshot_sort.png" height="300px" />
@@ -424,9 +425,7 @@
               With one click, you can share the question and its 4 options to
               Google Translate, which will translate to your selected language.
             </p>
-            <p>
-              This is the most popular feature of the app.
-            </p>
+            <p>This is the most popular feature of the app.</p>
           </div>
         </div>
         <!-- /Card -->
@@ -478,11 +477,11 @@
         >. Our purpose is to give the community alternative ways to study and to
         be successful in the exam.
       </p>
-      <div>Copyright &copy; 2020, Adalbero</div>
+      <div>Copyright &copy; 2020-2023, Adalbero Fernandes Guimaraes</div>
       <span
         class="material-icons app-link"
         onClick="appLink('mailto:app.adalbero@gmail.com')"
-        style="color: inherit;"
+        style="color: inherit"
         >mail</span
       >
     </div>

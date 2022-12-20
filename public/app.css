@@ -92,7 +92,7 @@ a.anchor {
 
 .content {
   max-width: 740px;
-  width: 750px;
+  --width: 750px;
   padding: 32px;
 
   --background-color: lightgreen;
@@ -115,6 +115,16 @@ a.anchor {
 
 .app-badge {
   text-align: center;
+}
+
+.app-toolbar {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.app-button {
+  height: 18px;
 }
 
 @media (max-width: 750px) {
